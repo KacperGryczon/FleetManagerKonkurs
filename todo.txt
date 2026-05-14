@@ -1,0 +1,116 @@
+***GOTOWE*** trzeba zrobić jakiś prosty login/register w html css i podpiąć tego js żeby już można się było logować 
+jakiś dashboard widok który będzie widział użytkownik po zalogowaniu
+homepage jeszcze przed zalogowaniem się, w którymś ai już mam rozpisane jak to zrobić, ale wiadomo
+hero, jakieś do czego służy aplikacja, do jakich problemów jesteśmy rozwiązaniem, potem jakiś jak to działa
+3 tile proste dodaj firme, dodaj pojazdy, kierowców, i daty dokumnetów coś takiego
+***GOTOWE*** JAKIŚ DESIGN TRZEBA ZNALEŹĆ NAJPIERW I KOLORKI ŻEBY WSZYSTKO JUŻ ROBIĆ W JAKIMŚ STYLU KONKRETNYM
+
+Co dokończyć:
+-Szczegóły
+*****-Co widzą użytkownicy z poszczególnymi rolami, żeby nie widzieli przycisków w menu
+-Jak rejestruje się nowy użytkownik to firma się automatycznie zakład, kopilot mówi że trzeba wszysto wywalić i wted powinno banglać bo jakiś rekord niby zalega
+?????-Coś graficznie zrobić ewentualnie      KRYSTIAN POTEM OCENI
+*****-Jak coś się dodaj to żeby na górze na zielonkawym tle się wyświetlało potwierdzenie a nie jako alert nawet jest już div#alert w htmlu
+
+A co dzisiaj zrobione 19.04:
+-Żeby na moblice jakoś w miarę się wyświetlały te rowy z danymi pojazdy, kierowcy itd. 
+-I tyle? XDDD trochę nad tym siedziałem z 3 godziny :P well... shit ale jutro będę ogarniał powoli albo trzeba szybko bo i jakąś prezentację trzeba ogarnąć, powerpoint bez sensu, obs się psuje na tym kompie może na biurowym ewentualnie
+
+21.04:
+-Zrobiona funkcja żeby się pokazywały komunikaty
+-I już chowają się te w menu, tylko jeszcze trzeba nad tym popracować na pewno czy to wszystko dokładnie działa
+
+22.04:
+-Modal zrobiony, tylko zrobić go jeszcze dla użytkowników i zrobić żeby wyglądał jak człowiek
+
+-Jeszcze trzeba te wszystkie dane pousuwać i zobaczyć jak to bangla
+-Ogarnąć użytkowników co mogą dokładnie ROBIĆ
+-Moje dokumenty i Moje pojazdy zrobić 
+-Poprawić wygląd modala
+
+25.04:
+-Modal zrobiony graficznie i już działa całkowiciej
+
+26.04:
+-Dodana ikonka w modalu
+-Zrobione że jak dodaje się użytkownika - kierowcę to dodaje się kierowca z dobrymi danymi
+-Trzeba sprawdzić czy co się dzieje jak dodaje się kierowcę, to czy dodaje się wtedy użytkownik
+-I stworzone są funkcję do wyświetlania moich pojazdów i moich dokumentów ALE NIE DZIAŁAJĄ
+
+-Trzeba zrobić te moje dokumenty/pojazdy
+-STWORZYĆ NOWEGO UŻYTKOWNIKA TOTALNIE NOWEGO ŻEBY ZOBACZYĆ JAK DZIAŁA DODAWANIE FIRMY - a właśnie czy nazwa firmy to cały czas moja firma, ale to chyba było zrobione i trzeba wszystkie dane usunąć i wtedy powinno działać
+-Dobra dzisiaj nie mam już czasu, ale jest taki problem że jak dodajemy nowego kierowcę to od razu tworzy się użytkownik - kierowca, tylko że tam przecież trzeba ustawić jakieś piersze hasło więc trochę bez sensu i trzeba to jakoś zrobić ale już nie mam czasu dzisiaj
+^^^^^^^^^^ TOOOOOOO WAŻNE ^^^^^^^^^^
+
+28.04:
+-Naprawione dodawanie użytkownika-kierowcy!!!!!!
+-Moje pojazdy i Moje dokumenty dalej nie działają :/
+
+Trzeba to naprawić i ogarnąć
+W dashboard dla kierowcy żeby był taki sam, tylko wyłączyć mu szybkie akcje żeby się nie wyświetlały
+Jeszcze trzeba przetestować to co mogą i czym mogą zarządzać poszczególni użytkownicy 
+STWORZYĆ NOWEGO UŻYTKOWNIKA TOTALNIE NOWEGO ŻEBY ZOBACZYĆ JAK DZIAŁA DODAWANIE FIRMY - a właśnie czy nazwa firmy to cały czas moja firma, ale to chyba było zrobione i trzeba wszystkie dane usunąć i wtedy powinno działać
+To też trzeba przetestować ^^
+
+
+
+TRZEBA USTAWIĆ TAK ŻEBY auth_id W TABELI UŻYTKOWNIK ODPOWIADAŁO ID Z authentication-user I JESZCZE NIE DZIAŁA DALEJ ZMIANA DANYCH DLA KIEROWCY
+
+
+jak już jakiś view jest otwart to nie powinno się go dać kliknąć żeby nie pojawiał się nowy loader
+email w dodaj kierowcę trzeba zweryfikować email żeby to faktycznie był email
+NIP i REGON dodać max liczbe znaków
+kalendarz czy ciężarówka jest w trasie czy nie     niby spoko pomysł
+
+trzeba będzie to zrobić w nowym repo na githubie i ukryć .env i node_modules w gitIgnore
+
+tylko że w dokumentach zmienia się data, a nie aktualizuje się status, i dalej wyświetla się jako "wkrótce wygasa" i nie aktualizują się dane w dashboardzie. Jeszcze popraw dodatkową rzeczy bo w dashobrdzie kierowcy w "nadchodzące terminy" wyświetlają się tylko dokumenty przypisane do tego kierowcy, a nie wyświetlają się dokumenty przypisane do jego pojazdów
+
+
+*dalej nie naprawił że dokumenty się nie chcą pobierać
+*musi naprawić żeby przeglądający nie mógł usuwać użytkowników jak kliknie w ich szczegóły 
+
+dalej nie naprawił tego że jak zmieniam imię i nazwisko użytkownika to i tak się nie zmienia w tabeli kierowca
+dalej nie naprawił że kierowca może edytować dokumenty
+musi naprawić bo użytkownikowi administratorowi nie może zmodyfikować żadnych danych, oprócz użytkowników i ustawień własnego profilu
+ale naprawił to pole emaila w dodawaniu użytkownika
+
+
+
+
+
+
+
+Here are the problems that are STILL not fixed: 1. When I change a user’s first and last name, the value in the KIEROWCA table does not update.
+
+The UZYTKOWNIK table updates, but KIEROWCA.imie_nazwisko stays unchanged. 2. Documents still cannot be downloaded.
+
+Clicking to download a document does not return the file correctly (previously it was redirecting to something like %7B%7D). 3. A driver can update documents, but the new data isn't updated in the database. New issues that MUST be fixed: 1. A viewer (Przeglądający) must not be able to delete users from the “user details” view.
+
+Right now, a viewer can open user details and still perform destructive actions like delete, which should be blocked. 2. The Administrator user still cannot modify any company-related data, vehicles, drivers, or documents.
+
+The administrator can currently only:
+
+manage users
+
+change their own profile settings
+
+The administrator should have permissions similar to the Owner (according to the PERMISSIONS config), including:
+
+managing fleet (vehicles)
+
+managing drivers
+
+managing documents
+
+managing company settings.
+
+
+
+Downloading URL files works, kierowca name on documents works, "przeglądający" user can't delete users. But there is also one bug in "przeglądający" user profile. The company data doesn't display properly in users modal "szczegóły". what also doesn't work is: driver still can't change the data of the documents, well he can but the data isn't updated in the database, and the "administrator" user still can't do anything other than magnaging users there are some errors in the console on the screen. Deeply analyze whole code, and check for bugs, and i will correct you before u do anything, thing that u change in #file:permissionService.js in "administrator" doesn't help
+
+nie działa wyświetlanie menu hamburger 
+jak się dodaje plik do dokumentu to trzeba go dwa razy wybrać
+jak się dodaje samochód, albo kierowcę, albo dokument i potem się przechodzi do innego widoku to generują się one podwójnie
+jak kierowca zmienia dane dokumentu to lista dokumentów nie restartuje się automatycznie tylko trzeba wyjść z widoku i spowrotem do niego wejść
+coś RLS nie działa na to że admin może usunąć kierowcę, ale może usunąć tego kierowcę którego dodał
