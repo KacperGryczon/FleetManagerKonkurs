@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "semi": true,
   "singleQuote": false,
@@ -9,3 +10,16 @@
   "printWidth": 100,
   "endOfLine": "lf"
 }
+=======
+{
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "printWidth": 100,
+  "endOfLine": "lf"
+}
+>>>>>>> d2ec9d55d4158170a3d665614a04a1f4e5fd647d

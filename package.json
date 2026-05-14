@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "konkurs_transport_app",
   "version": "1.0.0",
@@ -17,3 +18,24 @@
     "vite": "^5.4.21"
   }
 }
+=======
+{
+  "name": "konkurs_transport_app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "vite": "^5.4.21"
+  }
+}
+>>>>>>> d2ec9d55d4158170a3d665614a04a1f4e5fd647d

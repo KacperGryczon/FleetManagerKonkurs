@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules
 dist
 build
@@ -6,3 +7,13 @@ build
 .env.example
 package-lock.json
 *.lock
+=======
+node_modules
+dist
+build
+.git
+.env
+.env.example
+package-lock.json
+*.lock
+>>>>>>> d2ec9d55d4158170a3d665614a04a1f4e5fd647d
